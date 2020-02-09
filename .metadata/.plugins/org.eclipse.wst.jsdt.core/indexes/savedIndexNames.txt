@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\Users\Samuel\eclipse-workspace\Fundamentos-Web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
