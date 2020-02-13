@@ -24,7 +24,7 @@ public class EnviarMensagemServlet extends HttpServlet {
 		out.println("	</head>");
 		out.println("	<body>");
 		out.println("		<form action=\"/Agenda-Web/receberMensagem\">");
-		out.println("			<input type=\"text\" name=\"nomeUsario\" placeholder=\"Digite seu nome\">");
+		out.println("			<input type=\"text\" name=\"nomeUsuario\" placeholder=\"Digite seu nome\">");
 		out.println("			<br>");
 		out.println("			<button type\"submit\">Enviar</button>");
 		out.println("		</form>");
