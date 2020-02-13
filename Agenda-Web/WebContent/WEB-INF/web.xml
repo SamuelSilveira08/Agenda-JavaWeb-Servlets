@@ -30,7 +30,7 @@
   
   <servlet>
   	<servlet-name>ReceberMensagemServlet</servlet-name>
-  	<servlet-class>br.com.agenda.servlets/ReceberMensagemServlet</servlet-class>
+  	<servlet-class>br.com.agenda.servlets.ReceberMensagemServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
