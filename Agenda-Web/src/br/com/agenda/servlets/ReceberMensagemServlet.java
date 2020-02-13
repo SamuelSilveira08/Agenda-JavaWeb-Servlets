@@ -24,7 +24,7 @@ public class ReceberMensagemServlet extends HttpServlet {
 		out.println(		"<title> Olá! </title>");
 		out.println(	"</head>");
 		out.println(	"<body>");
-		out.println(		"<script> alert('Olá, " + nomeUsuario + "!");
+		out.println(		"<script> alert('Olá, " + nomeUsuario + "!'); </script>");
 		out.println(	"</body>");
 		out.println("</html>");
 	}
