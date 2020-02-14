@@ -1,8 +1,8 @@
 package br.com.agenda.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,35 +17,16 @@ public class MensagemServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-		out.println("<html>");
-		out.println("	<head>");
-		out.println("		<title> Escreva seu nome </title>");
-		out.println("	</head>");
-		out.println("	<body>");
-		out.println("		<form action=\"/Agenda-Web/receberMensagem\">");
-		out.println("			<input type=\"text\" name=\"nomeUsuario\" placeholder=\"Digite seu nome\">");
-		out.println("			<br><br>");
-		out.println("			<button type\"submit\">Enviar</button>");
-		out.println("		</form>");
-		out.println("	</body>");
-		out.println("</html>");
+		RequestDispatcher dispatcher = req.getServletContext()
+				.getRequestDispatcher("/WEB-INF/paginas/FormularioMensagem.jsp");
+		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String nomeUsuario = req.getParameter("nomeUsuario");
-		PrintWriter out = resp.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title> Olá! </title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<script> alert('Olá, " + nomeUsuario + "!'); </script>");
-		out.println("</body>");
-		out.println("</html>");
+		RequestDispatcher dispatcher = req.getServletContext()
+				.getRequestDispatcher("/WEB-INF/paginas/ResultadoMensaegem.jsp");
+		dispatcher.forward(req, resp);
 	}
-	
-	
 
 }
