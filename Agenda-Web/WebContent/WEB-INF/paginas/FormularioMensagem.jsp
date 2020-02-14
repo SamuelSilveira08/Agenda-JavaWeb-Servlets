@@ -7,7 +7,7 @@
 <title>Formulário de Mensagem</title>
 </head>
 <body>
-	<form method="post" action="/mensagem">
+	<form method="post" action="/Agenda-Web/mensagem">
 		<label>Digite seu nome:</label><br>
 		<input type="text" placeholder="Digite seu nome aqui" name="nomeUsuario">
 		<button type="submit">Enviar!</button>
