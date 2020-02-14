@@ -8120,3 +8120,6 @@ Caused by: java.lang.NullPointerException
 	at org.eclipse.jst.jee.model.internal.mergers.WebApp3Merger.mergeServlets(WebApp3Merger.java:36)
 	at org.eclipse.jst.jee.model.internal.mergers.WebAppMerger.process(WebAppMerger.java:79)
 	... 160 more
+
+!ENTRY org.eclipse.wst.server.core 4 0 2020-02-14 17:25:22.735
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.

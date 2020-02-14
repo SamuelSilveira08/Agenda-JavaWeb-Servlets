@@ -3,6 +3,8 @@
 	<name>Agenda-Web</name>
 	<comment></comment>
 	<projects>
+		<project>Agenda-Entidades</project>
+		<project>Agenda-Repositorios</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
