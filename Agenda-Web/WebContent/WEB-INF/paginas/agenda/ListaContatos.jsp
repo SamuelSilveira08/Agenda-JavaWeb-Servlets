@@ -16,6 +16,7 @@
 				<th>Nome</th>
 				<th>Idade</th>
 				<th>Telefone</th>
+				<th>Ações</th>
 			</tr>
 		</thead>
 		<tbody>
