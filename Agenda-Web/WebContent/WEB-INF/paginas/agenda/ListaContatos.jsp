@@ -19,7 +19,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<jstl:forEach items="${listaContatos}" var="contato">
+			<jstl:forEach items="${contatos}" var="contato">
 				<tr>
 					<td>${contato.nome}</td>
 					<td>${contato.idade}</td>
