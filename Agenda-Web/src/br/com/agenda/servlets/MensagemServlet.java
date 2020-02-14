@@ -25,7 +25,7 @@ public class MensagemServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		RequestDispatcher dispatcher = req.getServletContext()
-				.getRequestDispatcher("/WEB-INF/paginas/ResultadoMensaegem.jsp");
+				.getRequestDispatcher("/WEB-INF/paginas/ResultadoMensagem.jsp");
 		dispatcher.forward(req, resp);
 	}
 
