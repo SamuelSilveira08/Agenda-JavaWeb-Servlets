@@ -8123,3 +8123,20 @@ Caused by: java.lang.NullPointerException
 
 !ENTRY org.eclipse.wst.server.core 4 0 2020-02-14 17:25:22.735
 !MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+!SESSION 2020-02-16 10:17:58.481 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=13.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-16 10:18:59.573
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Samuel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.jsp.ui 2 2 2020-02-16 10:21:17.540
+!MESSAGE Computing Java proposals did not complete normally. The operation took too long to return.

@@ -25,13 +25,13 @@
 					<td>${contato.nome}</td>
 					<td>${contato.idade}</td>
 					<td>${contato.telefone}</td>
-					<td><a style="text-decoration: none;" href="editar?id">Editar</a>
-						| <a style="text-decoration: none;" href="excluir?id">Excluir</a></td>
+					<td><a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/editar?id">Editar</a>
+						| <a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/excluir?id">Excluir</a></td>
 				</tr>
 			</jstl:forEach>
 		</tbody>
 	</table>
-	<a style="text-decoration: none;" href="incluir">Criar novo
+	<a style="text-decoration: none;" href="#{pageContext.request.contextPath}/incluir">Criar novo
 		contato</a>
 </body>
 </html>
