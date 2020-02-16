@@ -15,7 +15,7 @@
 		<label>Idade do contato</label><br>
 		<input type="number" name="idadeContato" style="width: 203px;" value="${contato.idade}"><br>
 		<label>Telefone do contato</label><br>
-		<input type="text" name="telefoneContato" size=25 style="margin-bottom: 5px;" value="${contato.telefone}" disabled><br>
+		<input type="text" name="telefoneContato" size=25 style="margin-bottom: 5px;" value="${contato.telefone}"><br>
 		<button type="submit">Cadastrar!</button>
 	</form>
 </body>
