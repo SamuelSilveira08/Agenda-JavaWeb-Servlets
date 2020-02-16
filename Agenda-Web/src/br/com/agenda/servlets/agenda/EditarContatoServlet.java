@@ -51,7 +51,7 @@ public class EditarContatoServlet extends HttpServlet {
 		contato.setIdade(Integer.parseInt(req.getParameter("idadeContato")));
 		contato.setTelefone(req.getParameter("telefoneContato"));
 		try {
-			repositorio.save(contato);
+			repositorio.update(contato);
 		} catch (SQLException e) {
 			req.getSession().setAttribute("mensagemErro", e.getMessage());
 		}

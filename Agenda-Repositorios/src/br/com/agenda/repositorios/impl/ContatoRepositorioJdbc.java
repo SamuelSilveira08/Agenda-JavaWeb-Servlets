@@ -45,7 +45,7 @@ public class ContatoRepositorioJdbc implements AgendaRepositorio<Contato> {
 	@Override
 	public void delete(Contato entity) throws SQLException {
 		try (Connection con = ConnectionFactory.getConnection()) {
-			PreparedStatement stmt = con.prepareStatement("DELETE FROM contato WHERE id LIKE ?;");
+			PreparedStatement stmt = con.prepareStatement("DELETE FROM contato WHERE id = ?;");
 			stmt.setInt(1, entity.getId());
 			stmt.execute();
 		}

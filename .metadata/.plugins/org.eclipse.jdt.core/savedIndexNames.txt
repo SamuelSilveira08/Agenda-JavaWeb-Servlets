@@ -17,7 +17,6 @@ INDEX VERSION 1.131+C:\Users\Samuel\eclipse-workspace\Agenda\.metadata\.plugins\
 2491252482.index
 1671692264.index
 2024826691.index
-3098635447.index
 4278919984.index
 1838329760.index
 785298928.index
