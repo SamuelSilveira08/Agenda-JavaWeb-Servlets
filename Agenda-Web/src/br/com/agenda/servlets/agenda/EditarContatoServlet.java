@@ -32,7 +32,7 @@ public class EditarContatoServlet extends HttpServlet {
 			if (contato.isPresent()) {
 				req.setAttribute("contato", contato.get());
 			} else {
-				req.getSession().setAttribute("mensagemErro", "Este contato n√£o existe");
+				req.getSession().setAttribute("mensagemErro", "Este contato n√o existe");
 				resp.sendRedirect(req.getServletContext().getContextPath() + "/agenda/listar");
 			}
 		} catch (SQLException e) {
@@ -47,6 +47,7 @@ public class EditarContatoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		AgendaRepositorio<Contato> repositorio = new ContatoRepositorioJdbc();
 		Contato contato = new Contato();
+		contato.setId(Integer.parseInt(req.getParameter("id")));
 		contato.setNome(req.getParameter("nomeContato"));
 		contato.setIdade(Integer.parseInt(req.getParameter("idadeContato")));
 		contato.setTelefone(req.getParameter("telefoneContato"));

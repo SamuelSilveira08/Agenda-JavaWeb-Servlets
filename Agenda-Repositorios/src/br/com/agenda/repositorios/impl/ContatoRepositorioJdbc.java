@@ -34,7 +34,7 @@ public class ContatoRepositorioJdbc implements AgendaRepositorio<Contato> {
 	@Override
 	public void save(Contato entity) throws SQLException {
 		try (Connection con = ConnectionFactory.getConnection()) {
-			PreparedStatement stmt = con.prepareStatement("INSERT INTO contato VALUES (?, ?, ?);");
+			PreparedStatement stmt = con.prepareStatement("INSERT INTO contato VALUES (null, ?, ?, ?);");
 			stmt.setString(1, entity.getNome());
 			stmt.setInt(2, entity.getIdade());
 			stmt.setString(3, entity.getTelefone());

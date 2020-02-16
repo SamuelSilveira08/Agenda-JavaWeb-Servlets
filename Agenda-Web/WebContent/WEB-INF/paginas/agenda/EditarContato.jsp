@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h2>Edição de contato</h2>
-	<form method="post" action="${pageContext.request.contextPath}/agenda/editar">
+	<form method="post" action="${pageContext.request.contextPath}/agenda/editar?id=${contato.id}">
 		<label>Nome do contato</label><br>
 		<input type="text" name="nomeContato" size=25 value="${contato.nome}"><br>
 		<label>Idade do contato</label><br>
