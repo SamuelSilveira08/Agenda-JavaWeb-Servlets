@@ -55,9 +55,9 @@ public class ContatoRepositorioJdbc implements AgendaRepositorio<Contato> {
 	public void update(Contato entity) throws SQLException {
 		try (Connection con = ConnectionFactory.getConnection()) {
 			PreparedStatement stmt = con
-					.prepareStatement("UPDATE contato SET nome = ?, idade = ?, telefone = ? WHERE id LIKE ?;");
+					.prepareStatement("UPDATE contato SET nome = ?, idade = ?, telefone = ? WHERE id = ?;");
 			stmt.setString(1, entity.getNome());
-			stmt.setInt(2, entity.getId());
+			stmt.setInt(2, entity.getIdade());
 			stmt.setString(3, entity.getTelefone());
 			stmt.setInt(4, entity.getId());
 			stmt.executeUpdate();
