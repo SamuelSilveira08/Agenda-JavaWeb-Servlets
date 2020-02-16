@@ -28,7 +28,8 @@ public class EditarContatoServlet extends HttpServlet {
 		AgendaRepositorio<Contato> repositorio = new ContatoRepositorioJdbc();
 		try {
 			List<Contato> contatos = repositorio.selectAll();
-			var contato = contatos.stream().filter(c1 -> c1.getTelefone().equals(req.getParameter("telefone"))).findFirst();
+			var contato = contatos.stream().filter(c1 -> c1.getTelefone().equals(req.getParameter("telefone")))
+					.findFirst();
 			if (contato.isPresent()) {
 				req.setAttribute("contato", contato.get());
 			} else {
@@ -38,13 +39,24 @@ public class EditarContatoServlet extends HttpServlet {
 		} catch (SQLException e) {
 			req.getSession().setAttribute("mensagemErro", e.getMessage());
 		}
-		RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/WEB-INF/paginas/agenda/EditarContato.jsp");
+		RequestDispatcher dispatcher = req.getServletContext()
+				.getRequestDispatcher("/WEB-INF/paginas/agenda/EditarContato.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		AgendaRepositorio<Contato> repositorio = new ContatoRepositorioJdbc();
+		Contato contato = new Contato();
+		contato.setNome(req.getParameter("nomeContato"));
+		contato.setIdade(Integer.parseInt(req.getParameter("idadeContato")));
+		contato.setTelefone(req.getParameter("telefoneContato"));
+		try {
+			repositorio.save(contato);
+		} catch (SQLException e) {
+			req.getSession().setAttribute("mensagemErro", e.getMessage());
+		}
+		resp.sendRedirect(req.getServletContext().getContextPath() + "/agenda/listar");
 	}
 
 }
