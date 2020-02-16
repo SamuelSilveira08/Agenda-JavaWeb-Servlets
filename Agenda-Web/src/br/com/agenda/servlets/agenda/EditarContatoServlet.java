@@ -28,7 +28,7 @@ public class EditarContatoServlet extends HttpServlet {
 		AgendaRepositorio<Contato> repositorio = new ContatoRepositorioJdbc();
 		try {
 			List<Contato> contatos = repositorio.selectAll();
-			var contato = contatos.stream().filter(c1 -> c1.getNome().equals(req.getParameter("nome"))).findFirst();
+			var contato = contatos.stream().filter(c1 -> c1.getTelefone().equals(req.getParameter("telefone"))).findFirst();
 			if (contato.isPresent()) {
 				req.setAttribute("contato", contato.get());
 			} else {
