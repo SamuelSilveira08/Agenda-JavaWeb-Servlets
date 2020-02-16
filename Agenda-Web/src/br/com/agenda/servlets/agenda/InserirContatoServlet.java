@@ -38,7 +38,7 @@ public class InserirContatoServlet extends HttpServlet {
 		try {
 			repositorio.save(contato);
 		} catch (SQLException e) {
-			req.setAttribute("mensagemErro", e.getMessage());
+			req.getSession().setAttribute("mensagemErro", e.getMessage());
 		}
 		resp.sendRedirect(req.getServletContext().getContextPath() + "/agenda/listar");
 	}
