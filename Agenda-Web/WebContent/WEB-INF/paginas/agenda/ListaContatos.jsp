@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Lista de Contatos</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
 				<th>Nome</th>
 				<th>Idade</th>
 				<th>Telefone</th>
-				<th>AÃ§Ãµes</th>
+				<th>Ações</th>
 			</tr>
 		</thead>
 		<tbody>
