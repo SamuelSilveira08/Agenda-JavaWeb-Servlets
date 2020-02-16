@@ -25,8 +25,8 @@
 					<td>${contato.nome}</td>
 					<td>${contato.idade}</td>
 					<td>${contato.telefone}</td>
-					<td><a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/editar?telefone=${contato.telefone}">Editar</a>
-						| <a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/excluir?telefone=${contato.telefone}">Excluir</a></td>
+					<td><a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/editar?id=${contato.id}">Editar</a>
+						| <a style="text-decoration: none;" href="${pageContext.request.contextPath}/agenda/excluir?id=${contato.id}">Excluir</a></td>
 				</tr>
 			</jstl:forEach>
 		</tbody>
