@@ -2,6 +2,7 @@ package br.com.agenda.entidades;
 
 public class Contato {
 
+	private int id;
 	private String nome;
 	private int idade;
 	private String telefone;
@@ -39,6 +40,14 @@ public class Contato {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
