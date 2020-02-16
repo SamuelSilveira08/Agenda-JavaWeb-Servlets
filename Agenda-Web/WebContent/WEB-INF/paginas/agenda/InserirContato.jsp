@@ -11,12 +11,11 @@
 	<h2>Inclusão de contato</h2>
 	<form method="post" action="${pageContext.request.contextPath}/agenda/incluir">
 		<label>Nome do contato</label><br>
-		<input type="text" name="nomeContato" placeholder="Digite o nome do contato aqui">
+		<input type="text" name="nomeContato" size=25 placeholder="Digite o nome do contato aqui"><br>
 		<label>Idade do contato</label><br>
-		<input type="number" name="idadeContato" placeholder="Digite a idade do contato aqui">
+		<input type="number" name="idadeContato" style="width: 203px;" placeholder="Digite a idade do contato aqui"><br>
 		<label>Telefone do contato</label><br>
-		<input type="text" name="telefoneContato" placeholder="Digite o telefone do contato aqui">
-		<br>
+		<input type="text" name="telefoneContato" size=25 style="margin-bottom: 5px;" placeholder="Digite o telefone do contato aqui"><br>
 		<button type="submit">Cadastrar!</button>
 	</form>
 </body>
